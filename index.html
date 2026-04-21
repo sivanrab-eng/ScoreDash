@@ -214,6 +214,15 @@
       display: none;
     }
 
+    #start-screen {
+      display: block;
+      width: 100%;
+    }
+
+    #start-screen.is-hidden {
+      display: none;
+    }
+
     .start-kicker {
       color: var(--accent);
       letter-spacing: 0.18em;
@@ -2925,6 +2934,7 @@
 
     
 
+<div id="start-screen">
 <section class="hud" aria-label="hud top bar">
   <div id="stats" class="stats">
     <div id="score-pill-top">
@@ -2941,6 +2951,13 @@
 
   <div class="start-actions">
     <button id="start-btn" class="btn-start" type="button">התחל</button>
+    <div id="resume-panel" class="resume-panel" hidden>
+      <p id="resume-copy">להמשיך מהמקום שבו עצרת או להתחיל מחדש?</p>
+      <div class="resume-actions">
+        <button id="resume-btn" class="btn-start" type="button">להמשיך</button>
+        <button id="restart-btn" class="btn-secondary" type="button">להתחיל מחדש</button>
+      </div>
+    </div>
     <button id="install-btn" class="btn-secondary" type="button">הורד אפליקציה</button>
     <button id="start-share-btn" class="btn-share" type="button">שתף משחק</button>
   </div>
@@ -2952,6 +2969,7 @@
     <div id="collection-shelf" class="collection-shelf">
       <div id="sticker-grid" class="sticker-grid"></div>
     </div>
+</div>
 
     <div id="main-ui" class="main-ui is-hidden">
       <div id="stage-row" class="stage-row">
